@@ -42,7 +42,7 @@ public class CombatController : MonoBehaviour
 
     public Color DebugRayColor = Color.blue;
 
-    InputData input;
+    //InputData input;
 
     Rigidbody rb;
 
@@ -64,20 +64,20 @@ public class CombatController : MonoBehaviour
 
     void Update()
     {
-        input = InputPoller.reference.GetInput(inputNumber);
+       // input = InputPoller.reference.GetInput(inputNumber);
 
         DrawDebugLine();
 
-        MovePlayer(input.leftStick.y);
+       // MovePlayer(input.leftStick.y);
 
-        RotatePlayer(input.leftStick.x);
+        //RotatePlayer(input.leftStick.x);
 
-        if (input.buttonNorth && Fire1IsEnabled)
+       // if (input.buttonNorth && Fire1IsEnabled)
         {
             Fire1();
         }
 
-        if (input.buttonEast && Fire2IsEnabled)
+        //if (input.buttonEast && Fire2IsEnabled)
         {
             Fire2();
         }

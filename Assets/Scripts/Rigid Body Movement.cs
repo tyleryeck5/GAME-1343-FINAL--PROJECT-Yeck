@@ -9,7 +9,7 @@ public class RigidBodyMovement : MonoBehaviour
 
     public float rotateRate = 180;
     
-    InputData input;
+   // InputData input;
 
     Rigidbody rb;
     void Start()
@@ -20,10 +20,10 @@ public class RigidBodyMovement : MonoBehaviour
    
     void Update()
     {
-        input = InputPoller.reference.GetInput(inputNumber);
+       // input = InputPoller.reference.GetInput(inputNumber);
 
-        MovePlayer(input.leftStick.y);
-        RotatePlayer(input.leftStick.x);
+       // MovePlayer(input.leftStick.y);
+       // RotatePlayer(input.leftStick.x);
     }
 
     void MovePlayer(float value)
