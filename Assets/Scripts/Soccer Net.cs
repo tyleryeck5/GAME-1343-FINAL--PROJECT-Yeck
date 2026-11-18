@@ -16,7 +16,7 @@ public class SoccerNet : MonoBehaviour
         {
            
             score++;
-            sb.Reset(); 
+            //sb.Reset(); 
             
             Debug.Log("Ball Scored! Team " + teamNumber + "@" +score);
         }

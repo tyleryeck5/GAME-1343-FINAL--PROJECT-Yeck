@@ -18,12 +18,12 @@ public class SoccerBall : MonoBehaviour
 
     
 
-    public void Reset()
+    /*public void Reset()
     {
         gameObject.transform.position = StartingLocation;
         gameObject.transform.rotation = StartingRotation;
         rb.linearVelocity = Vector3.zero;
         rb .angularVelocity = Vector3.zero;
 
-    }
+    }*/
 }

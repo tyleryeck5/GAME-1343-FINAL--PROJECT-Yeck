@@ -36,13 +36,13 @@ public class CombatController : MonoBehaviour
 
     public Transform firingPoint;
 
-    public LaserControl laserControl;
+   public LaserControl laserControl;
 
-    public float RayDistance = 50f;
+   public float RayDistance = 50f;
 
-    public Color DebugRayColor = Color.blue;
+   public Color DebugRayColor = Color.blue;
 
-    //InputData input;
+   InputData input;
 
     Rigidbody rb;
 
@@ -62,22 +62,22 @@ public class CombatController : MonoBehaviour
     }
 
 
-    void Update()
+  void Update()
     {
-       // input = InputPoller.reference.GetInput(inputNumber);
+        input = InputPoller.reference.GetInput(inputNumber);
 
         DrawDebugLine();
 
-       // MovePlayer(input.leftStick.y);
+        MovePlayer(input.leftStick.y);
 
-        //RotatePlayer(input.leftStick.x);
+        RotatePlayer(input.leftStick.x);
 
-       // if (input.buttonNorth && Fire1IsEnabled)
+        if (input.buttonNorth && Fire1IsEnabled)
         {
             Fire1();
         }
 
-        //if (input.buttonEast && Fire2IsEnabled)
+        if (input.buttonEast && Fire2IsEnabled)
         {
             Fire2();
         }
@@ -105,7 +105,7 @@ public class CombatController : MonoBehaviour
     {
         gameObject.transform.Rotate(Time.deltaTime * value * rotateRate * Vector2.up);
     }
-    public void Fire1()
+   public void Fire1()
     {
         //Debug.Log("Fire1");
         SetSoundRandomPitch();
@@ -171,7 +171,7 @@ public class CombatController : MonoBehaviour
     }
 
 
-    public void Reset()
+   public void Reset()
     {
         Instantiate(deathDecalPrefab, gameObject.transform.position, gameObject.transform.rotation);
 
@@ -184,7 +184,7 @@ public class CombatController : MonoBehaviour
         rb.linearVelocity = Vector3.zero;
     }
 
-    public void AddKill()
+   public void AddKill()
     {
         kills++;
 
